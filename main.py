@@ -1,4 +1,5 @@
 import requests
+import tkinter as tk
 import datetime
 
 API_KEY = "9Q6UUD35AW3D5853RCSYTFL7T"
@@ -21,3 +22,7 @@ def hourlyForecast(location=HOME):
     now = datetime.datetime.now()
     r = requests.get("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/{location}/{now}", params = PARAMS)
     return r
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.mainloop()
